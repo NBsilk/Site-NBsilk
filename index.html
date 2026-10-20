@@ -9,8 +9,16 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script>
+    /* Marca que o JS está ativo. Se o script.js falhar (arquivo ausente, rede, navegador antigo),
+       em 2,5 s a marca é removida e todo o conteúdo volta a ficar visível. */
+    (function(d){d.documentElement.className+=' js';
+      setTimeout(function(){ if(!d.documentElement.getAttribute('data-ready')){ d.documentElement.className=d.documentElement.className.replace(/\bjs\b/,''); } },2500);
+    })(document);
+  </script>
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
+  <noscript><style>.js .reveal{opacity:1!important;transform:none!important}</style></noscript>
 </head>
 <body>
   <div class="progress" id="progress" aria-hidden="true"></div>
